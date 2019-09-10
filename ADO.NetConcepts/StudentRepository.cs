@@ -25,7 +25,7 @@ namespace ADO.NetConcepts
             List<Student> students = new List<Student>();
             while (result.Read())
             {
-
+                var student = StudentMapper.Map(result);
                 students.Add(new Student((int)result["Id"], (string)result["Name"], (string)result["Email"], DateTime.Parse((string)result["AdmissionDate"])));
             }
             _db.Connection.Close();
@@ -34,7 +34,20 @@ namespace ADO.NetConcepts
 
         public List<Student> GetStudents()
         {
-            return new List<Student>();
+            string selectStudents = $"SELECT * FROM Student";
+            _db.Command.CommandText = selectStudents;
+            _db.Connection.Open();
+            var result = _db.Command.ExecuteReader();
+
+            List<Student> students = new List<Student>();
+            while (result.Read())
+            {
+                var student = StudentMapper.Map(result);
+                //var student_ = StudentMapper.Map<Student>(result);
+                students.Add(student);
+            }
+            _db.Connection.Close();
+            return students;
         }
 
         public void Insert(Student student)

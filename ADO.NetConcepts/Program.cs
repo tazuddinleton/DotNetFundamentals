@@ -13,11 +13,19 @@ namespace ADO.NetConcepts
         static void Main(string[] args)
         {
             var studentRepository = new StudentRepository(new SqlClientDbContext());
-            Student student = new Student("Student 1", "s1@email.com", DateTime.Now);
-            studentRepository.Insert(student);
 
-            var student_ = studentRepository.GetById(100);
-            
+            //Student student = new Student("Student 1", "s1@email.com", DateTime.Now);
+            //studentRepository.Insert(student);
+
+            //var student_ = studentRepository.GetById(100);
+
+            var students = studentRepository.GetStudents();
+            foreach (var student in students)
+            {
+                Console.WriteLine("{0}, {1}, {2}, {3}", student.Id, student.Name, student.Email, student.AdmissionDate);
+            }
+
+            Console.ReadLine();
         }
     }
 }

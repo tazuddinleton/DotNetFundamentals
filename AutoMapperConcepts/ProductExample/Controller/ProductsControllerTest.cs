@@ -15,11 +15,11 @@ namespace AutoMapperConcepts
             {
                 cfg.CreateMap<Product, ProductDto>();
             });
-            var productController = new ProductsController(config, new DbContext());
+            var productsController = new ProductsController(config, new DbContext());
 
-            var product_1 = productController.GetProduct(1);
-            var product_2 = productController.GetProduct(2);
-            var product_3 = productController.GetProduct(5);
+            var product_1 = productsController.GetProduct(1);
+            var product_2 = productsController.GetProduct(2);
+            var product_3 = productsController.GetProduct(5);
         }
 
         public static void Main(string[] args)

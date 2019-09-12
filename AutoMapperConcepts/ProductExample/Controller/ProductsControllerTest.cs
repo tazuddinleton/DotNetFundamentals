@@ -20,13 +20,12 @@ namespace AutoMapperConcepts
             var product_1 = productController.GetProduct(1);
             var product_2 = productController.GetProduct(2);
             var product_3 = productController.GetProduct(5);
-
         }
 
         public static void Main(string[] args)
         {
             var testRunner = new ProductsControllerTest();
-            testRunner.Run();
+            testRunner.Run();                
         }
 
     }

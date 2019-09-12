@@ -8,7 +8,7 @@ namespace AutoMapperConcepts
 
         static void Main(string[] args)
         {
-
+            
             var config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<AuthorDTO, Author>()

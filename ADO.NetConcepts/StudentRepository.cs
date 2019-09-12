@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ADO.NetConcepts
 {    
@@ -21,12 +22,11 @@ namespace ADO.NetConcepts
             
             List<Student> students = new List<Student>();
             while (result.Read())
-            {
-                var student = StudentMapper.Map(result);
-                students.Add(new Student((int)result["Id"], (string)result["Name"], (string)result["Email"], DateTime.Parse((string)result["AdmissionDate"])));
+            {                
+                students.Add(StudentMapper.Map(result));
             }
             _db.Connection.Close();
-            return students[0];
+            return students.FirstOrDefault();
         }
 
         public List<Student> GetStudents()

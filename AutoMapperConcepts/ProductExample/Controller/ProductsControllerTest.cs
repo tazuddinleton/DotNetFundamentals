@@ -9,7 +9,7 @@ namespace AutoMapperConcepts
 {
     public class ProductsControllerTest
     {
-        public void RunTest()
+        public void Run()
         {
             MapperConfiguration config = new MapperConfiguration(cfg =>
             {
@@ -26,7 +26,7 @@ namespace AutoMapperConcepts
         public static void Main(string[] args)
         {
             var testRunner = new ProductsControllerTest();
-            testRunner.RunTest();
+            testRunner.Run();
         }
 
     }

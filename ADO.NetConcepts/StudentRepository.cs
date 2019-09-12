@@ -2,12 +2,9 @@
 using System.Collections.Generic;
 
 namespace ADO.NetConcepts
-{
-
-
+{    
     public class StudentRepository
     {
-
         private SqlClientDbContext _db;
 
         public StudentRepository(SqlClientDbContext sqlClientDb)
@@ -61,9 +58,7 @@ namespace ADO.NetConcepts
 
         public void Delete(int id)
         {
-
+            throw new NotImplementedException();
         }
-    }
-
-    
+    }    
 }

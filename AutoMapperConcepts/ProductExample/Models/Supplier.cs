@@ -7,7 +7,7 @@
             CompanyName = companyName;
             Contact = contact;
         }
-        public string CompanyName { get; set; }
-        public string Contact { get; set; }
+        public string CompanyName { get; private set; }
+        public string Contact { get; private set; }
     }
 }

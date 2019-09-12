@@ -11,7 +11,10 @@
 
         public int Id { get; private set; }
         public string ProductName { get; private set; }
-        public Supplier Supplier { get; set; }
+        public Supplier Supplier { get; private set; }
+
+
+
 
         private void SetSupplier() {
             if (Id <= 3)

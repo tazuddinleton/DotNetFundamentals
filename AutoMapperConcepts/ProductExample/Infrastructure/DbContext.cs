@@ -8,8 +8,10 @@ namespace AutoMapperConcepts
 {
     public class DbContext
     {
-        List<Product> _products;
-        public DbContext() {
+        private List<Product> _products;
+
+        public DbContext()
+        {
             _products = new List<Product>();
             _products.Add(new Product(1, "Product 1"));
             _products.Add(new Product(2, "Product 2"));

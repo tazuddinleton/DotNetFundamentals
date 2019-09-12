@@ -20,8 +20,10 @@ namespace AutoMapperConcepts
 
         public ProductDto GetProduct(int id)
         {
-            var dto = _dbContext.Products.Where(x => x.Id == id).ProjectTo<ProductDto>(_config)
-                 .SingleOrDefault();
+            var dto = _dbContext.Products
+                .Where(x => x.Id == id)
+                .ProjectTo<ProductDto>(_config)
+                .SingleOrDefault();
             return dto;
         }
     }

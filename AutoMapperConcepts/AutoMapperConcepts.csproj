@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BF8CF1A3-C192-412B-8395-5B0F5156B0F5}</ProjectGuid>
+    <ProjectGuid>{9334E927-547A-430B-9C44-8E98A87D6ABA}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ADO.NetConcepts</RootNamespace>
-    <AssemblyName>ADO.NetConcepts</AssemblyName>
+    <RootNamespace>AutoMapperConcepts</RootNamespace>
+    <AssemblyName>AutoMapperConcepts</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>AutoMapperConcepts.ProductsControllerTest</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AutoMapper, Version=9.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <HintPath>..\packages\AutoMapper.9.0.0\lib\net461\AutoMapper.dll</HintPath>
@@ -46,16 +49,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SqlClientDbContext.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="AuthorExample\Author.cs" />
+    <Compile Include="ProductExample\Infrastructure\DbContext.cs" />
+    <Compile Include="ProductExample\Models\Product.cs" />
+    <Compile Include="ProductExample\Models\ProductDto.cs" />
+    <Compile Include="ProductExample\Controller\ProductsController.cs" />
+    <Compile Include="AuthorExample\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student.cs" />
-    <Compile Include="StudentMapper.cs" />
-    <Compile Include="StudentRepository.cs" />
+    <Compile Include="ProductExample\Controller\ProductsControllerTest.cs" />
+    <Compile Include="ProductExample\Models\Supplier.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

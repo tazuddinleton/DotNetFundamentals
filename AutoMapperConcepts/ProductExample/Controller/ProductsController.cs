@@ -10,11 +10,11 @@ namespace AutoMapperConcepts
 {
     public class ProductsController
     {
-        MapperConfiguration _config;
+        IMapper _mapper;
         DbContext _dbContext;
-        public ProductsController(MapperConfiguration config, DbContext dbContext)
+        public ProductsController(IMapper mapper, DbContext dbContext)
         {
-            _config = config;
+            _mapper = mapper;
             _dbContext = dbContext;
         }
 
@@ -22,7 +22,7 @@ namespace AutoMapperConcepts
         {
             var dto = _dbContext.Products
                 .Where(x => x.Id == id)
-                .ProjectTo<ProductDto>(_config)
+                .ProjectTo<ProductDto>(_mapper.ConfigurationProvider)
                 .SingleOrDefault();
             return dto;
         }

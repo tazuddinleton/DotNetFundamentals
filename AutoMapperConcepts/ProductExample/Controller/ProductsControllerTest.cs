@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using AutoMapperConcepts.ProductExample.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,8 @@ namespace AutoMapperConcepts
     {
         public void Run()
         {
-            MapperConfiguration config = new MapperConfiguration(cfg =>
-            {
-                cfg.CreateMap<Product, ProductDto>();
-            });
-            var productsController = new ProductsController(config, new DbContext());
+            IMapper mapper = AutoMapperProfile.CreateMap();
+            var productsController = new ProductsController(mapper, new DbContext());
 
             var product_1 = productsController.GetProduct(1);
             var product_2 = productsController.GetProduct(2);

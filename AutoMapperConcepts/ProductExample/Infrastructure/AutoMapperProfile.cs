@@ -10,15 +10,6 @@ namespace AutoMapperConcepts.ProductExample.Infrastructure
 {
     public class AutoMapperProfile : Profile
     {
-        public static IMapper CreateMap()
-        {
-            MapperConfiguration config = new MapperConfiguration(cfg =>
-            {
-                cfg.AddProfile(new AutoMapperProfile());
-            });
-            return config.CreateMapper();
-        }
-
         public AutoMapperProfile()
         {
             LoadConvertes();

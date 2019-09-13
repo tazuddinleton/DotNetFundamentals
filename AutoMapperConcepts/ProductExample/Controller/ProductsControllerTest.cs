@@ -12,7 +12,7 @@ namespace AutoMapperConcepts
     {
         public void Run()
         {
-            IMapper mapper = AutoMapperProfile.CreateMap();
+            IMapper mapper = AutoMapperFactory.CreateMap();
             var productsController = new ProductsController(mapper, new DbContext());
 
             var product_1 = productsController.GetProduct(1);

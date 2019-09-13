@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuthorExample\Author.cs" />
+    <Compile Include="ProductExample\Infrastructure\AutoMapperFactory.cs" />
     <Compile Include="ProductExample\Infrastructure\AutoMapperProfile.cs" />
     <Compile Include="ProductExample\Infrastructure\DbContext.cs" />
     <Compile Include="ProductExample\Entities\Product.cs" />

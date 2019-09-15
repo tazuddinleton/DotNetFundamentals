@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9334E927-547A-430B-9C44-8E98A87D6ABA}</ProjectGuid>
+    <ProjectGuid>{DE631C2D-2AE1-4DB9-AFAC-3CAB7272D866}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>AutoMapperConcepts</RootNamespace>
-    <AssemblyName>AutoMapperConcepts</AssemblyName>
+    <RootNamespace>LINQ</RootNamespace>
+    <AssemblyName>LINQ</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,13 +32,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>AutoMapperConcepts.ProductsControllerTest</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper, Version=9.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.9.0.0\lib\net461\AutoMapper.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,28 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AuthorExample\Author.cs" />
-    <Compile Include="ProductExample\Entities\Order.cs" />
-    <Compile Include="ProductExample\Entities\OrderDto.cs" />
-    <Compile Include="ProductExample\Infrastructure\AutoMapperFactory.cs" />
-    <Compile Include="ProductExample\Infrastructure\AutoMapperProfile.cs" />
-    <Compile Include="ProductExample\Infrastructure\DbContext.cs" />
-    <Compile Include="ProductExample\Entities\Product.cs" />
-    <Compile Include="ProductExample\Entities\ProductDto.cs" />
-    <Compile Include="ProductExample\Controller\ProductsController.cs" />
-    <Compile Include="AuthorExample\Program.cs" />
-    <Compile Include="ProductExample\Infrastructure\IHaveCustomMapping.cs" />
-    <Compile Include="ProductExample\Infrastructure\IMapFrom.cs" />
-    <Compile Include="ProductExample\Infrastructure\MapperConfig.cs" />
-    <Compile Include="ProductExample\Infrastructure\MapperProfileHelper.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ProductExample\Controller\ProductsControllerTest.cs" />
-    <Compile Include="ProductExample\Entities\Supplier.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

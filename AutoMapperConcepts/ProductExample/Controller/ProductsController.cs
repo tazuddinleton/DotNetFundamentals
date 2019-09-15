@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
+using AutoMapperConcepts.ProductExample.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,15 @@ namespace AutoMapperConcepts
             var dto = _dbContext.Products
                 .Where(x => x.Id == id)
                 .ProjectTo<ProductDto>(_mapper.ConfigurationProvider)
+                .SingleOrDefault();
+            return dto;
+        }
+
+        public OrderDto GetOrder(int id)
+        {
+            var dto = _dbContext.Orders
+                .Where(x => x.Id == id)
+                .ProjectTo<OrderDto>(_mapper.ConfigurationProvider)
                 .SingleOrDefault();
             return dto;
         }

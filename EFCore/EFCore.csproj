@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DE631C2D-2AE1-4DB9-AFAC-3CAB7272D866}</ProjectGuid>
+    <ProjectGuid>{62F18B92-F2F8-408F-ADAA-E47D1D191E51}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>LINQ</RootNamespace>
-    <AssemblyName>LINQ</AssemblyName>
+    <RootNamespace>EFCore</RootNamespace>
+    <AssemblyName>EFCore</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -111,6 +111,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Person.cs" />
+    <Compile Include="Infrastructure\DataContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

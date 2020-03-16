@@ -43,7 +43,7 @@ namespace HandlingConcurrency
             using (var context = new DatabaseContext())
             {
                 context.Departments.Attach(user1);
-                user1.Budget += 10;
+                user1.Budget = 10;
                 context.SaveChanges();
             }
 

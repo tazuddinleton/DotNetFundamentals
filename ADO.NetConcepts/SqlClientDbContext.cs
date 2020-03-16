@@ -13,7 +13,8 @@ namespace ADO.NetConcepts
 
         public SqlClientDbContext()
         {
-            _conn = new SqlConnection("data source=DESKTOP-IG45RTH\\SQLEXPRESS; database=Sample; integrated security=SSPI");
+            
+            _conn = new SqlConnection("data source=DESKTOP-O2E45CT\\SQLEXPRESS; database=Sample; user id=sa; password=1234; integrated security=SSPI");
             _command = new SqlCommand();
             _conn.Open();
             string createTable = @"

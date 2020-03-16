@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.757
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADO.NetConcepts", "ADO.NetConcepts\ADO.NetConcepts.csproj", "{BF8CF1A3-C192-412B-8395-5B0F5156B0F5}"
 EndProject
@@ -10,6 +10,16 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ", "LINQ\LINQ.csproj", "{DE631C2D-2AE1-4DB9-AFAC-3CAB7272D866}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore", "EFCore\EFCore.csproj", "{62F18B92-F2F8-408F-ADAA-E47D1D191E51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CQRS", "CQRS", "{D918101F-0717-46C5-BB56-676AC8441FCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCQRS.Domain", "SimpleCQRL.Domain\DemoCQRS.Domain.csproj", "{D6B3256E-6F9D-41D3-86AE-8BBA84F7BBCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCQRS.Contracts", "DemoCQRS.Contracts\DemoCQRS.Contracts.csproj", "{3A6C027F-5965-4C59-B322-4D89F45F5B9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCQRS.Application", "DemoCQRS.Application\DemoCQRS.Application.csproj", "{0B05F71D-DA38-4CCE-92D8-282DA84BAB61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HandlingConcurrency", "HandlingConcurrency\HandlingConcurrency.csproj", "{BB879B89-C797-4C03-A334-1963EB24F74E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +43,30 @@ Global
 		{62F18B92-F2F8-408F-ADAA-E47D1D191E51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62F18B92-F2F8-408F-ADAA-E47D1D191E51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62F18B92-F2F8-408F-ADAA-E47D1D191E51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6B3256E-6F9D-41D3-86AE-8BBA84F7BBCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6B3256E-6F9D-41D3-86AE-8BBA84F7BBCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6B3256E-6F9D-41D3-86AE-8BBA84F7BBCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6B3256E-6F9D-41D3-86AE-8BBA84F7BBCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A6C027F-5965-4C59-B322-4D89F45F5B9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A6C027F-5965-4C59-B322-4D89F45F5B9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A6C027F-5965-4C59-B322-4D89F45F5B9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A6C027F-5965-4C59-B322-4D89F45F5B9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B05F71D-DA38-4CCE-92D8-282DA84BAB61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B05F71D-DA38-4CCE-92D8-282DA84BAB61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B05F71D-DA38-4CCE-92D8-282DA84BAB61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B05F71D-DA38-4CCE-92D8-282DA84BAB61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB879B89-C797-4C03-A334-1963EB24F74E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB879B89-C797-4C03-A334-1963EB24F74E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB879B89-C797-4C03-A334-1963EB24F74E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB879B89-C797-4C03-A334-1963EB24F74E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D6B3256E-6F9D-41D3-86AE-8BBA84F7BBCD} = {D918101F-0717-46C5-BB56-676AC8441FCE}
+		{3A6C027F-5965-4C59-B322-4D89F45F5B9B} = {D918101F-0717-46C5-BB56-676AC8441FCE}
+		{0B05F71D-DA38-4CCE-92D8-282DA84BAB61} = {D918101F-0717-46C5-BB56-676AC8441FCE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {33A6FE27-D1B4-4348-9C47-617E21A3975A}
